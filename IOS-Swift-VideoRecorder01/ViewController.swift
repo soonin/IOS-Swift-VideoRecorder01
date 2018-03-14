@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import AVKit
+import MobileCoreServices
 
-class ViewController: UIViewController {
+class ViewController: UIViewController , UIImagePickerControllerDelegate , UINavigationControllerDelegate {
 
+    @IBOutlet weak var RecordButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -21,5 +25,31 @@ class ViewController: UIViewController {
     }
 
 
+
+    @IBAction func RecordAction(_ sender: UIButton) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            print("Camera Available")
+            
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera
+            imagePicker.mediaTypes = [kUTTypeMovie as String]
+            imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+        } else {
+            print("Camera UnAvaialable")
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
 }
 

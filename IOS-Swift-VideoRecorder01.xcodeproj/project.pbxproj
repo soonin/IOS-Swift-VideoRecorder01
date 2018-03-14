@@ -12,6 +12,7 @@
 		FA46A0DA20573E0300FC2C77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA46A0D820573E0300FC2C77 /* Main.storyboard */; };
 		FA46A0DC20573E0300FC2C77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA46A0DB20573E0300FC2C77 /* Assets.xcassets */; };
 		FA46A0DF20573E0300FC2C77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA46A0DD20573E0300FC2C77 /* LaunchScreen.storyboard */; };
+		FA46A0E8205741C900FC2C77 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA46A0E7205741C900FC2C77 /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FA46A0DB20573E0300FC2C77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA46A0DE20573E0300FC2C77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA46A0E020573E0300FC2C77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA46A0E7205741C900FC2C77 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA46A0E8205741C900FC2C77 /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +43,7 @@
 			children = (
 				FA46A0D320573E0300FC2C77 /* IOS-Swift-VideoRecorder01 */,
 				FA46A0D220573E0300FC2C77 /* Products */,
+				FA46A0E6205741C900FC2C77 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +66,14 @@
 				FA46A0E020573E0300FC2C77 /* Info.plist */,
 			);
 			path = "IOS-Swift-VideoRecorder01";
+			sourceTree = "<group>";
+		};
+		FA46A0E6205741C900FC2C77 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA46A0E7205741C900FC2C77 /* MobileCoreServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,11 +286,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C57K65Z4PC;
 				INFOPLIST_FILE = "IOS-Swift-VideoRecorder01/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pooya.brain.dev.IOS-Swift-VideoRecorder01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -288,11 +303,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C57K65Z4PC;
 				INFOPLIST_FILE = "IOS-Swift-VideoRecorder01/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pooya.brain.dev.IOS-Swift-VideoRecorder01";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
