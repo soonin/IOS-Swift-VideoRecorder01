@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,36 +17,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmS-5O-Mmc">
-                                <rect key="frame" x="84" y="185" width="207" height="43"/>
-                                <color key="backgroundColor" red="1" green="0.78323878020542326" blue="0.77427641839751904" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="Oc8-D6-0dP"/>
-                                    <constraint firstAttribute="width" constant="207" id="THr-ft-Czl"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Record Video"/>
-                                <connections>
-                                    <action selector="RecordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ynf-3D-bzJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="emy-Ro-VuX">
-                                <rect key="frame" x="84" y="389" width="207" height="43"/>
-                                <color key="backgroundColor" red="0.86162301740000002" green="0.97679832229999997" blue="0.9881622779" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="NE5-3B-lrM"/>
-                                    <constraint firstAttribute="width" constant="207" id="yX4-7d-Zi2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Play Video"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QiI-iJ-jkO">
+                                <rect key="frame" x="64" y="115.5" width="246" height="436"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmS-5O-Mmc">
+                                        <rect key="frame" x="0.0" y="0.0" width="246" height="213"/>
+                                        <color key="backgroundColor" red="1" green="0.1921524751" blue="0.1702234138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="213" id="jex-Qb-KVx"/>
+                                            <constraint firstAttribute="width" constant="246" id="yHH-Lj-Q0R"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="Record Video">
+                                            <color key="titleColor" red="0.37671978690000002" green="1" blue="0.60104460920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="RecordAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ynf-3D-bzJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="am4-CZ-XUm">
+                                        <rect key="frame" x="0.0" y="223" width="246" height="213"/>
+                                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="246" id="QCr-1h-PYo"/>
+                                            <constraint firstAttribute="height" constant="213" id="oIO-Es-52W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="Play Video">
+                                            <color key="titleColor" red="0.58188301320000002" green="0.21569153669999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openImgVideoPicker" destination="BYZ-38-t0r" eventType="touchUpInside" id="n7q-Ok-gem"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="emy-Ro-VuX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2dB-XG-W5K"/>
-                            <constraint firstItem="lmS-5O-Mmc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="165" id="EEQ-hE-nDN"/>
-                            <constraint firstItem="emy-Ro-VuX" firstAttribute="top" secondItem="lmS-5O-Mmc" secondAttribute="bottom" constant="161" id="HN8-ap-KgP"/>
-                            <constraint firstItem="lmS-5O-Mmc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lcY-ZI-XGb"/>
+                            <constraint firstItem="QiI-iJ-jkO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cec-i9-TMh"/>
+                            <constraint firstItem="QiI-iJ-jkO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mC9-A1-0jT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
